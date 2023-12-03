@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Port Traffic Analytics
+    chapters:
+      - file: congestion
+
+# cd ./port-congestion
+
+# Push to GitHub Page
+# ghp-import -n -p -f _build/html
+
+# Build this book
+# jb build .
+
+# Force build this book
+# jb build --all .
