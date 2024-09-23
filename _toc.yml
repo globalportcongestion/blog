@@ -16,8 +16,7 @@ chapters:
   - file: panama
 
 
-# conda activate blog
-# cd ./blog
+# conda activate ds_env
 # jb clean . --all
 # jb build --all .
 
