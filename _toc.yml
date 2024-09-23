@@ -24,5 +24,7 @@ chapters:
 # jb build .
 
 # Push to GitHub Page
+# For macOS
 # ghp-import -n -p -f _build/html
-# 
+# For Windows, remember to install nodejs and init git in vscode powershell
+# ghp-import -n -p -f -s _build\html
