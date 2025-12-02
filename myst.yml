@@ -1,0 +1,21 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 24334f9d-99e3-4e02-928e-af9ff32f8054
+  title: Port Congestion Analytics
+  description: Our latest work on port congestion analytics
+  keywords:
+    - maritime transport
+    - port congestion
+    - macroeconomics
+  authors: 
+    - Xiwen
+  github: globalportcongestion/blog
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+site:
+  template: book-theme
+  options:
+    favicon: favicon.ico
+    logo: logo.png
+
+# conda activate ds_env
