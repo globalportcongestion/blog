@@ -11,6 +11,11 @@ project:
   authors: 
     - Xiwen
   github: globalportcongestion/blog
+  toc:
+    - file: intro.md
+      # children:
+    - file: congestion.ipynb
+    - file: panama.ipynb
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
 site:
   template: book-theme
@@ -19,3 +24,4 @@ site:
     logo: logo.png
 
 # conda activate ds_env
+# jupyter book start
