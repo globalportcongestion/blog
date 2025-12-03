@@ -12,6 +12,7 @@ project:
     - Xiwen
   github: globalportcongestion/blog
   toc:
+    # - file: index.md
     - file: intro.md
       # children:
     - file: congestion.ipynb
