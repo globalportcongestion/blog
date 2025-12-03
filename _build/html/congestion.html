@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -404,17 +404,18 @@ ACR_t = \sum_{p \in \mathcal{P}} \left[ \frac{Delayed_{pt} + Undelayed_{pt}}{\su
 <p>where the congestion rate for each port <span class="math notranslate nohighlight">\(p \in \mathcal{P}\)</span> is computed by dividing the number of delayed ship visits by the total number of ship visits:</p>
 <div class="math notranslate nohighlight" id="equation-congestion-rate-for-a-port">
 <span class="eqno">(2)<a class="headerlink" href="#equation-congestion-rate-for-a-port" title="Link to this equation">#</a></span>\[
-Congestion_{pt} \equiv \frac{Delayed_{pt}}{Delayed_{pt} + Undelayed_{pt}}, \ \forall p \in \mathcal{P}. 
+Congestion_{pt} \equiv \frac{Delayed_{pt}}{Delayed_{pt} + Undelayed_{pt}}, \quad \forall p \in \mathcal{P}. 
 \]</div>
-<p><span class="math notranslate nohighlight">\(Delayed_{pt}\)</span> and <span class="math notranslate nohighlight">\(Undelayed_{pt}\)</span> represent the number of delayed and undelayed ship visits at port <span class="math notranslate nohighlight">\(p\)</span> in month <span class="math notranslate nohighlight">\(t\)</span>, respectively. The full list of the top 50 container ports can be found using the following link: <a class="reference external" href="https://www.worldshipping.org/top-50-ports">https://www.worldshipping.org/top-50-ports</a>.</p>
-<p>Average Congestion Time (ACT) — The average number of hours a containership waits in an anchorage area of a port before docking at a berth, weighted by the number of ship visits to the top 50 container ports worldwide:</p>
+<p><span class="math notranslate nohighlight">\(Delayed_{pt}\)</span> and <span class="math notranslate nohighlight">\(Undelayed_{pt}\)</span> represent the number of delayed and undelayed ship visits at port <span class="math notranslate nohighlight">\(p\)</span> in month <span class="math notranslate nohighlight">\(t\)</span>, respectively. The full list of the top 50 container ports can be accessed using the following link: <a class="reference external" href="https://www.worldshipping.org/top-50-ports">https://www.worldshipping.org/top-50-ports</a>.</p>
+<p>Average Congestion Time (ACT) — The average number of hours a container ship waits in an anchorage area of a port before docking at a berth, weighted by the number of ship visits to the top 50 container ports worldwide:</p>
 <div class="math notranslate nohighlight" id="equation-act">
 <span class="eqno">(3)<a class="headerlink" href="#equation-act" title="Link to this equation">#</a></span>\[
 ACT_t = \sum_{p \in \mathcal{P}} \left[ \frac{Delayed_{pt} + Undelayed_{pt}}{\sum_{p \in \mathcal{P}} \left( Delayed_{pt} + Undelayed_{pt} \right)} \cdot \frac{DelayHours_{pt}}{Delayed_{pt} + Undelayed_{pt}} \right], 
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(DelayHours_{pt}\)</span> represents the total number of hours that containerships spend in the anchorage areas of port <span class="math notranslate nohighlight">\(p\)</span> in month <span class="math notranslate nohighlight">\(t\)</span>, respectively.</p>
-<p>The identification of berth and anchorage areas in each port is achieved through the application of the IMA-DBSCAN algorithm, i.e., the Iterative, Multi-Attribute, Density-Based Spatial Clustering of Applications with Noise. The details and pseudo-codes can be found in Bai <em>et al</em>. (2023)<span id="id1"><sup><a class="reference internal" href="#id4" title="Xiwen Bai, Zhongjun Ma, Yao Hou, Yiliang Li, and Dong Yang. A Data-Driven Iterative Multi-Attribute Clustering Algorithm and Its Application in Port Congestion Estimation. IEEE Transactions on Intelligent Transportation Systems, 24(11):1–12, 2023. doi:10.1109/TITS.2023.3286477.">1</a></sup></span> and Bai <em>et al</em>. (2024)<span id="id2"><sup><a class="reference internal" href="#id7" title="Xiwen Bai, Jesús Fernández-Villaverde, Yiliang Li, and Francesco Zanetti. The Causal Effects of Global Supply Chain Disruptions on Macroeconomic Outcomes: Evidence and Theory. NBER Working Paper 32098, 2024. URL: https://www.nber.org/papers/w32098.">2</a></sup></span>.</p>
-<p>The monthly series of the ACR and ACT indices can be downloaded using the provided link: <a class="reference download internal" download="" href="_downloads/f5cac977ce6872d68fcaf5cd7a8258b4/congestion_indices.xlsx"><span class="xref download myst">Aggregated Congestion Indices</span></a>. Additionally, the disaggregated monthly series of congestion rates for the top 50 container ports are visualized in the following plot:</p>
+<p>where <span class="math notranslate nohighlight">\(DelayHours_{pt}\)</span> represents the total number of hours that container ships spend in the anchorage areas of port <span class="math notranslate nohighlight">\(p\)</span> in month <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>The identification of berth and anchorage areas in each port is achieved through the application of the IMA-DBSCAN algorithm, i.e., the Iterative, Multi-Attribute, Density-Based Spatial Clustering of Applications with Noise. The details and pseudo-code can be found in Bai <em>et al</em>. (2023)<span id="id1"><sup><a class="reference internal" href="#id4" title="Xiwen Bai, Zhongjun Ma, Yao Hou, Yiliang Li, and Dong Yang. A Data-Driven Iterative Multi-Attribute Clustering Algorithm and Its Application in Port Congestion Estimation. IEEE Transactions on Intelligent Transportation Systems, 24(11):1–12, 2023. doi:10.1109/TITS.2023.3286477.">1</a></sup></span> and Bai <em>et al</em>. (2024)<span id="id2"><sup><a class="reference internal" href="#id7" title="Xiwen Bai, Jesús Fernández-Villaverde, Yiliang Li, and Francesco Zanetti. The Causal Effects of Global Supply Chain Disruptions on Macroeconomic Outcomes: Evidence and Theory. NBER Working Paper 32098, 2024. URL: https://www.nber.org/papers/w32098.">2</a></sup></span>.</p>
+<p>The monthly series of the ACR and ACT indices can be downloaded using the following link: <a class="reference download internal" download="" href="_downloads/f5cac977ce6872d68fcaf5cd7a8258b4/congestion_indices.xlsx"><span class="xref download myst">ACR &amp; ACT</span></a>. Additionally, the disaggregated monthly series of congestion rates for the top 50 container ports (except for the Ports of Yingkou, Foshan, and Nantong in China) can be downloaded using the following link: <a class="reference download internal" download="" href="_downloads/85f5478f81ba4a13802ecadb8ba3ba83/disaggregated_congestion_indices.xlsx"><span class="xref download myst">Congestion Indices</span></a>.</p>
+<p>These three ports are excluded because their AIS trajectories did not overlap with the available berth polygons, or because their port names could not be reliably matched to corresponding berth polygons. All other ports in the global top 50 are included, ensuring comprehensive coverage of congestion conditions among the world’s major container ports.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <!-- Our research{cite}`bai2023supply` suggests that a misunderstanding of global supply chains may have contributed to inflation forecasting errors, and related content was reported in the Wall Street Journal{cite}`wsj2023supply`. Initially, many economists dismissed the early 2021 U.S. inflation as temporary, caused by pandemic-related supply chain disruptions. However, inflation persisted, leading to a new narrative that it was driven by a tight labor market. But inflation cooled in 2023 despite low unemployment, possibly because supply chain problems lasted longer than realized. We used ACR to measure port congestion globally, showing delays increased in 2020 and remained elevated through mid-2022, explaining inflation’s persistence. As ACR fell from August 2022, so did core inflation. The model proposed in this study shows that the supply-chain shock made prices unusually sensitive to changes in demand, so reining in demand can help a lot. --><section id="references">
@@ -523,7 +524,7 @@ By Xiwen Bai
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2025.
       <br/>
     
   </p>
