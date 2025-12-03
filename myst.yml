@@ -12,7 +12,7 @@ project:
     - Xiwen
   github: globalportcongestion/blog
   toc:
-    # - file: index.md
+    - file: index.md
     - file: intro.md
       # children:
     - file: congestion.ipynb
@@ -26,3 +26,4 @@ site:
 
 # conda activate ds_env
 # jupyter book start
+# jupyter book init --gh-pages
